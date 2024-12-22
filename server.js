@@ -22,3 +22,12 @@ app.use('/api/properties', require('./routes/propertyRoutes'));
 
 app.use('/api/images', imageRoutes);
 
+app.use((err, req, res, next) => {
+  console.error('Server error:', err);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
+
+app.listen(process.env.PORT, () => console.log(`Server running on port 5000`));
+
+module.exports = app; // Export the app instance for Vercel
+

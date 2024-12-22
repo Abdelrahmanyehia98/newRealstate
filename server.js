@@ -22,4 +22,3 @@ app.use('/api/properties', require('./routes/propertyRoutes'));
 
 app.use('/api/images', imageRoutes);
 
-app.listen(process.env.PORT, () => console.log(`Server running on port 5000`));

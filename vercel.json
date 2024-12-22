@@ -25,8 +25,8 @@
       }
   ],
   "env": {
-    "MONGO_URI": "@your_mongo_uri",
+    "MONGO_URI": "mongodb+srv://admin:Memotito78@cluster0.hhd3p.mongodb.net/realstate",
     "PORT": "5000",
-    "SECRET_KEY": "@your_secret_key"
+    "SECRET_KEY": "12345678"
   }
 }

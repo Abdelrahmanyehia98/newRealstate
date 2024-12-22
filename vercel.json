@@ -1,27 +1,21 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "server.js"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb+srv://admin:Memotito78@cluster0.hhd3p.mongodb.net/realstate",
+      "PORT": "5000",
+      "SECRET_KEY": "12345678"
     }
-  ],
-  "routes": [
-    {
-      "src": "/routes/images(.*)",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/routes/properties(.*)",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/routes/users(.*)",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
-    }
-  ]
-}
+  }
+  

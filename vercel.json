@@ -8,15 +8,15 @@
   ],
   "routes": [
     {
-      "src": "/api/images(.*)",
+      "src": "/routes/images(.*)",
       "dest": "/server.js"
     },
     {
-      "src": "/api/properties(.*)",
+      "src": "/routes/properties(.*)",
       "dest": "/server.js"
     },
     {
-      "src": "/api/users(.*)",
+      "src": "/routes/users(.*)",
       "dest": "/server.js"
     },
     {

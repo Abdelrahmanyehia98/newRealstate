@@ -22,7 +22,10 @@ router.post('/Properties', authMiddleware, async (req, res) => {
     });
 
     const savedProperty = await property.save();
-    res.status(201).json(savedProperty);
+    res.status(201).json({
+      message: 'Property added successfully',
+      property: savedProperty,
+    });
   } catch (err) {
     console.error(err); // Log the error for debugging
     res.status(400).json({ error: 'An error occurred while creating property' });
